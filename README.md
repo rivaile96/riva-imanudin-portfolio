@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Riva Imanudin - Personal Portfolio
 
-## Getting Started
+![Portfolio Screenshot](<GANTI_DENGAN_LINK_SCREENSHOT_LU.png>)
 
-First, run the development server:
+Selamat datang di repositori untuk website portofolio pribadi saya. Website ini dibangun dari nol untuk menampilkan perjalanan profesional, skill, dan project-project yang telah saya kerjakan di bidang IT dan Cyber Security.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**[ Lihat Live Demo](<GANTI_DENGAN_LINK_VERCEL_LU>)**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Fitur Utama
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   **Desain Modern & Responsif:** Dibangun dengan pendekatan *mobile-first* untuk memastikan tampilan yang optimal di semua perangkat, dari desktop hingga smartphone.
+-   **Animasi Interaktif:** Diperkaya dengan berbagai animasi canggih untuk memberikan pengalaman pengguna yang dinamis dan menarik, antara lain:
+    -   Background **Orb** & **Hyperspeed** berbasis WebGL (`ogl` & `three.js`).
+    -   Efek **Neon Border** dan **3D Tilt Card** pada kartu project dan profil.
+    -   Animasi teks canggih seperti **Rotating Text**, **Decrypted Text**, dan **Fuzzy Text**.
+    -   Animasi *on-scroll* yang mulus menggunakan **GSAP (GreenSock Animation Platform)**.
+-   **Data-Driven:** Semua konten seperti pengalaman kerja, pendidikan, dan project diambil dari data terstruktur, membuatnya mudah untuk di-update.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Teknologi yang Digunakan
 
-## Learn More
+-   **Framework:** [Next.js](https://nextjs.org/) (React Framework)
+-   **Styling:** [CSS Modules](https://github.com/css-modules/css-modules) (CSS murni tanpa library)
+-   **Animasi:**
+    -   [GSAP (GreenSock)](https://gsap.com/) - Untuk animasi on-scroll dan timeline.
+    -   [Framer Motion](https://www.framer.com/motion/) - Untuk animasi `RotatingText`.
+    -   [Three.js](https://threejs.org/) & [OGL](https://oframe.github.io/ogl/_site/) - Untuk rendering background 3D/WebGL.
+-   **Ikon:** [Lucide React](https://lucide.dev/)
+-   **Deployment:** [Vercel](https://vercel.com/)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Menjalankan Project Secara Lokal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Untuk menjalankan project ini di komputer lokal Anda, ikuti langkah-langkah berikut:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone repositori ini:**
+    ```bash
+    git clone [https://github.com/rivaile96/riva-imanudin-portfolio.git](https://github.com/rivaile96/riva-imanudin-portfolio.git)
+    ```
 
-## Deploy on Vercel
+2.  **Masuk ke direktori project:**
+    ```bash
+    cd riva-imanudin-portfolio
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.  **Install semua dependencies:**
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
+
+5.  Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+
+---
+
+Terima kasih telah mengunjungi repositori ini!

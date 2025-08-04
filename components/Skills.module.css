@@ -1,0 +1,174 @@
+/* components/Skills.module.css */
+
+.skills {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.filterButtons button {
+  background-color: var(--color-card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-text-secondary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.filterButtons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+}
+
+.filterButtons button.active {
+  background-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.columnTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-card);
+}
+
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 2rem;
+}
+
+.toolItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+/* --- EFEK GLASSMORPHISM UNTUK LOGO --- */
+.toolIconWrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Border tipis */
+  backdrop-filter: blur(8px); /* Efek blur kaca */
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.toolIconWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.toolItem img {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.toolItem:hover img {
+  transform: scale(1.1);
+}
+.toolItem span {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+/* --- END EFEK --- */
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Jarak antar skill item sedikit dikurangi */
+}
+
+/* --- EFEK GLASSMORPHISM UNTUK SKILL ITEM --- */
+.skillItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 50px;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-card);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+/* --- END EFEK --- */
+
+.skillName {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.3); /* Dibuat lebih gelap agar kontras */
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  border-radius: 4px;
+}
+
+.progressText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillItem {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    row-gap: 0.5rem;
+    column-gap: 1rem;
+  }
+  .skillName { grid-column: 1 / 2; grid-row: 1 / 2; }
+  .progressText { grid-column: 2 / 3; grid-row: 1 / 2; justify-self: end; }
+  .progressBar { grid-column: 1 / 3; grid-row: 2 / 3; }
+}

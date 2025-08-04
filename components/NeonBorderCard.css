@@ -1,0 +1,50 @@
+/* components/NeonBorderCard.css */
+
+/* Container utama yang akan punya background gradien */
+.neon-border-card {
+  position: relative;
+  padding: 3px; /* Ketebalan border */
+  border-radius: 18px; /* Sedikit lebih besar dari radius konten */
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Pseudo-element untuk animasi gradien berputar */
+.neon-border-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%; /* Dibuat lebih besar agar bisa berputar */
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    var(--color-primary),      /* Ungu */
+    var(--color-secondary),    /* Biru */
+    #34d399,                   /* Hijau */
+    var(--color-primary)       /* Kembali ke Ungu */
+  );
+  animation: rotate-gradient 4s linear infinite;
+  z-index: -1;
+}
+
+/* Konten di dalamnya yang menutupi gradien di tengah */
+.neon-border-card-content {
+  background-color: #0d0d1a; /* Warna background sedikit lebih terang dari body */
+  height: 100%;
+  width: 100%;
+  border-radius: 16px; /* Radius konten */
+  overflow: hidden;
+}
+
+/* Animasi untuk memutar gradien */
+@keyframes rotate-gradient {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

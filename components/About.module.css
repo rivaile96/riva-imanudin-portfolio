@@ -1,0 +1,122 @@
+.about {
+  padding: 6rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.title span { color: var(--color-primary); }
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .contentWrapper {
+    grid-template-columns: 3fr 4fr;
+    gap: 4rem;
+  }
+}
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0 0 2rem 0;
+}
+.encryptedChar {
+  color: var(--color-primary);
+  opacity: 0.5;
+}
+.buttonGroup { display: flex; gap: 1rem; }
+.btnPrimary, .btnSecondary {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btnPrimary { background-color: var(--color-primary); color: white; }
+.btnPrimary:hover { filter: brightness(1.2); }
+.btnSecondary {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-card);
+}
+.btnSecondary:hover {
+  background-color: var(--color-card);
+  color: var(--color-primary);
+}
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-card);
+  align-items: stretch;
+}
+.stat {
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.stat h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+.stat p {
+  margin: 0.5rem 0 0 0;
+  color: var(--color-text-secondary);
+}
+.githubBox {
+  background-color: rgba(147, 51, 234, 0.1);
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.githubBox:hover {
+  background-color: rgba(147, 51, 234, 0.2);
+  transform: translateY(-5px);
+}
+.githubLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.githubIcon { color: var(--color-text); }
+.githubTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.fuzzyTextWrapper {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

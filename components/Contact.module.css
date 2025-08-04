@@ -1,0 +1,89 @@
+/* components/Contact.module.css */
+.contact {
+    padding: 6rem 2rem 8rem 2rem; /* Padding bawah ditambah */
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.title span {
+    color: var(--color-primary);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto 4rem auto;
+}
+
+.contactGrid {
+    display: grid;
+    /* Default 1 kolom untuk mobile */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1000px; /* Lebar maksimal diperbesar */
+    margin: 0 auto;
+}
+
+/* 2 kolom untuk tablet */
+@media (min-width: 640px) {
+    .contactGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 4 kolom untuk desktop */
+@media (min-width: 1024px) {
+    .contactGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* Wrapper untuk Magnet agar bisa di-layout oleh grid */
+.magnetWrapper {
+    display: block !important;
+}
+
+.contactCard {
+    background-color: var(--color-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem; /* Ukuran dikecilkan */
+    text-decoration: none;
+    color: var(--color-text);
+    backdrop-filter: blur(8px);
+    height: 100%; /* Pastikan kartu mengisi wrapper magnet */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Jarak antar elemen di dalam kartu */
+    transition: background-color 0.3s ease;
+}
+
+.contactCard:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contactCard svg {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem; /* Margin dikecilkan */
+}
+
+.contactCard h3 {
+    margin: 0;
+    font-size: 1.1rem; /* Font dikecilkan */
+}
+
+.contactCard p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 0.8rem; /* Font dikecilkan */
+    word-break: break-word;
+}
