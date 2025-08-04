@@ -1,6 +1,8 @@
 # Riva Imanudin - Personal Portfolio
 
-![Portfolio Screenshot](https://i.imgur.com/NttPwHc)
+![Portfolio Screenshot](https://i.imgur.com/RetsG48.png)
+
+
 
 Selamat datang di repositori untuk website portofolio pribadi saya. Website ini dibangun dari nol untuk menampilkan perjalanan profesional, skill, dan project-project yang telah saya kerjakan di bidang IT dan Cyber Security.
 
